@@ -2,6 +2,7 @@ package com.app.galleryapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,9 +13,12 @@ import android.view.MenuItem;
 
 import com.app.galleryapp.Fragment.AlbumMainFragment;
 import com.app.galleryapp.Fragment.PhotoMainFragment;
+import com.app.galleryapp.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding binding;
 
     // FramLayout에 각 메뉴의 Fragment를 바꿔 준다
 
@@ -29,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding= DataBindingUtil.setContentView(this, R.layout.activity_main);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
