@@ -7,9 +7,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.app.galleryapp.Fragment.AlbumMainFragment;
 import com.app.galleryapp.Fragment.PhotoMainFragment;
@@ -30,10 +33,17 @@ public class MainActivity extends AppCompatActivity {
     Fragment photoFrag;
     Fragment albumFrag;
 
+    // Search ImageView
+    ImageView iv_search;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        iv_search = binding.facebookSearchIcon;
+        iv_search.setImageResource(R.drawable.ic_baseline_search_24);
+        iv_search.setOnClickListener(SearchIV);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener()
@@ -76,4 +86,12 @@ public class MainActivity extends AppCompatActivity {
 
         }
     }
+
+    View.OnClickListener SearchIV=new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            Intent intent=new Intent(getApplicationContext(), SearchActivity.class);
+            startActivity(intent);
+        }
+    };
 }
