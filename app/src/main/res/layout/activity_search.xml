@@ -19,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
-        <TextView
-            android:id="@+id/tv_facebook_searchbar"
+        <EditText
+            android:id="@+id/et_facebook_searchbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="검색창입니다 입력해주세요"
