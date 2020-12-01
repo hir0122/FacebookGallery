@@ -1,4 +1,4 @@
-package com.app.galleryapp.Fragment;
+package com.app.galleryapp.Fragment.MainFragment;
 
 import android.os.Bundle;
 

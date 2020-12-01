@@ -1,4 +1,4 @@
-package com.app.galleryapp;
+package com.app.galleryapp.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,15 +7,15 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.app.galleryapp.Fragment.AlbumMainFragment;
-import com.app.galleryapp.Fragment.PhotoMainFragment;
+import com.app.galleryapp.Fragment.MainFragment.AlbumMainFragment;
+import com.app.galleryapp.Fragment.MainFragment.PhotoMainFragment;
+import com.app.galleryapp.R;
 import com.app.galleryapp.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -75,12 +75,12 @@ public class MainActivity extends AppCompatActivity {
         ft = fm.beginTransaction();
         switch (n) {
             case 0:
-                ft.replace(R.id.frameLayout, photoFrag);
+                ft.replace(R.id.MainFrameLayout, photoFrag);
                 ft.commit();
                 break;
 
             case 1:
-                ft.replace(R.id.frameLayout, albumFrag);
+                ft.replace(R.id.MainFrameLayout, albumFrag);
                 ft.commit();
                 break;
 

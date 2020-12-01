@@ -1,11 +1,11 @@
-package com.app.galleryapp;
+package com.app.galleryapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.galleryapp.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;

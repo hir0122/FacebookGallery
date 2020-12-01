@@ -1,18 +1,12 @@
-package com.app.galleryapp;
+package com.app.galleryapp.Activity;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Base64;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import com.app.galleryapp.R;
 
 public class IntroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){

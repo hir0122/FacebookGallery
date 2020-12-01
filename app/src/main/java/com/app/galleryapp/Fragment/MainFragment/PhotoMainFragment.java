@@ -1,4 +1,4 @@
-package com.app.galleryapp.Fragment;
+package com.app.galleryapp.Fragment.MainFragment;
 
 import android.os.Bundle;
 
@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.app.galleryapp.R;
-import com.app.galleryapp.databinding.FragmentAlbumMainBinding;
 import com.app.galleryapp.databinding.FragmentPhotoMainBinding;
 
 public class PhotoMainFragment extends Fragment {

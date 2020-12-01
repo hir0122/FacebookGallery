@@ -1,4 +1,4 @@
-package com.app.galleryapp;
+package com.app.galleryapp.Activity;
 
 import android.widget.Toast;
 
