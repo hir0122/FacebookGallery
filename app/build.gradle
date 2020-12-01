@@ -43,5 +43,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+    // 페이스북 SDK 추가
+    implementation 'com.facebook.android:facebook-login:5.15.3'
 }
