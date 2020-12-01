@@ -3,9 +3,11 @@
     <item
         android:id="@+id/PHOTO_ITEM"
         android:enabled="true"
+        android:icon="@drawable/photo"
         android:title="@string/MAIN_PHOTO_MENU_STRING" />
     <item
         android:id="@+id/GALLERY_ITEM"
         android:enabled="true"
+        android:icon="@drawable/album"
         android:title="@string/MAIN_GALLERY_MENU_STRING" />
 </menu>

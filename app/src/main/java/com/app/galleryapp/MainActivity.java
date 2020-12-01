@@ -3,6 +3,8 @@ package com.app.galleryapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +15,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // FramLayout에 각 메뉴의 Fragment를 바꿔 준다
+    private FragmentManager fragmentManager=getSupportFragmentManager();
+
+    // 2개의 메뉴에 들어갈 Fragment들
     Fragment photoFrag;
     Fragment albumFrag;
 
@@ -25,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
         albumFrag=new AlbumMainFragment();
 
         // 초기화면 설정
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, photoFrag).commit();
+        FragmentTransaction transaction=fragmentManager.beginTransaction();
+        transaction.replace(R.id.frameLayout, photoFrag).commitAllowingStateLoss();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom);
+        BottomNavigationView bottomNavigationView=findViewById(R.id.bottom_navigation);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener(){
                     @Override
