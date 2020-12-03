@@ -38,18 +38,21 @@
         android:layout_margin="10dp"
         >
         <Button
+            android:id="@+id/btn_people"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PEOPLE"
             android:layout_marginHorizontal="10dp"
             />
         <Button
+            android:id="@+id/btn_pages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PAGES"
             android:layout_marginHorizontal="10dp"
             />
         <Button
+            android:id="@+id/btn_videos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="VIDEOS"
@@ -61,10 +64,10 @@
         android:id="@+id/SearchFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toBottomOf="@id/choiceLinear"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         />
 
 
