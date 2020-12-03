@@ -21,8 +21,8 @@ public class SearchPageAdapter extends RecyclerView.Adapter<SearchPageAdapter.Se
         private TextView textView_title, textView_release, texView_director;
         public SearchViewHolder(View itemView) {
             super(itemView);
-            imageView_img = (ImageView) itemView.findViewById(R.id.iv_profileImg);
-            textView_title = (TextView) itemView.findViewById(R.id.tv_nameTitle);
+            imageView_img = (ImageView) itemView.findViewById(R.id.imageView_img);
+            textView_title = (TextView) itemView.findViewById(R.id.textView_title);
         }
     }
 

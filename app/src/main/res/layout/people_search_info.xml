@@ -20,29 +20,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:paddingRight="8dp"
-        android:text="영화제목"
+        android:text="사용자 이름"
         android:textSize="18dp"
         android:textColor="#000000"
         app:layout_constraintStart_toEndOf="@+id/imageView_img"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imageView_img"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView_img"/>
 
-    <TextView
-        android:id="@+id/textView_release"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="개봉일"
-        app:layout_constraintStart_toEndOf="@+id/imageView_img"
-        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
-
-    <TextView
-        android:id="@+id/textView_director"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="감독"
-        app:layout_constraintStart_toEndOf="@+id/imageView_img"
-        app:layout_constraintTop_toTopOf="@+id/textView_release" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
